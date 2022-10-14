@@ -3,9 +3,10 @@ import handler from "../handler";
 
 export const main = handler(async (event) => {
   const noteId = event.pathParameters.id;
+  const userId = event.requestContext.authorizer.iam.cognitoIdentity.identityId;
 
   await notesRepository.delete({
-    userId: "123",
+    userId: userId,
     noteId: noteId,
   });
 });
