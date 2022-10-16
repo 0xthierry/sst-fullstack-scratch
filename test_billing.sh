@@ -1,0 +1,12 @@
+npx aws-api-gateway-cli-test \
+  --username='admin@example.com' \
+  --password='Passw0rd!' \
+  --user-pool-id='us-east-1_mZzz9XFqr' \
+  --app-client-id='4m4sqslqapevbomklfjss2k1mb' \
+  --cognito-region='us-east-1' \
+  --identity-pool-id='us-east-1:656cbb3f-d197-471a-9c26-cb2c9790e11e' \
+  --invoke-url='https://e5sg3dsh53.execute-api.us-east-1.amazonaws.com' \
+  --api-gateway-region='us-east-1' \
+  --path-template='/billing' \
+  --method='POST' \
+  --body='{"source":"tok_visa","storage":21}'
