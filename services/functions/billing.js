@@ -3,7 +3,7 @@ import handler from "../handler";
 
 const PSP_SECRET_KEY = process.env.PSP_SECRET_KEY;
 
-const costCalculator = (storage) => {
+export const costCalculator = (storage) => {
   const rate = storage <= 10 ? 4 : storage <= 100 ? 2 : 1;
   return rate * storage * 100;
 };
